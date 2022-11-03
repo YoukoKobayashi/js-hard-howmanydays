@@ -1,11 +1,12 @@
-//let tgtValue = document.getElementById("dateSet");
-let tgtValue =
-    document.getElementsByTagName("input")[0];
-let tgt = tgtValue.getAttribute("value");
+const tgtValue =
+    document.getElementById("dateSet");
+//const tgtValue =
+//    document.getElementsByTagName("input")[0];
+let tgt = tgtValue.getAttribute("value", "value");
+console.dir(dateSet); //表示内容  value:"2022-11-14",valueAsDate:Mon Nov 14 2022 09:00:00 GMT+0900
 let tgtSec = moment(tgt, "x");
 let output = document.getElementById("diffTime");
 output.textContent = `${tgt}まであと`;
-console.dir(dateSet);
 
 const countDown = () => {
     let now = moment(new Date());
